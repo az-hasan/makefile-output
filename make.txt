@@ -1,0 +1,117 @@
+../Makefile.Test:81: epoll_socket.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: test_start_pthread_m.m.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: start.pthread.m.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: dir.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: time.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: fork.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: alarm.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: script.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: divzero.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: vfork_exec.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: pid_kill.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: meminfo.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: pause.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: msg_create.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: sleep.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: clone.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: multiproc.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: kill.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: readdir.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: helloworld.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: system.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: dup.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: file.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: socketpair.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: fork_bomb.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: sqrt.m.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: epoll.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: helloworld.pthread.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: cpuinfo.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: pid_alloc.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: sem.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: errno.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: tcp.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: vfork.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: sync.pthread.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: msg_send.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: malloc.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: exec_fork.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: futextest.pthread.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: msg_create.libos.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: msg_send.libos.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: pipe.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: fork_exec.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: pipe_latency.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: get_time.m.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: rename.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: condvar.pthread.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: brk.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: fs.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: multisleep.manifest.sgx.d: No such file or directory
+../Makefile.Test:81: ls.manifest.manifest.sgx.d: No such file or directory
+[ manifest ]
+sed -e 's:\$(PAL):/home/user1/graphene-sgx/Runtime/pal_loader SGX:g' -e 's:\$(PWD):/home/user1/graphene-sgx/LibOS/shim/test/native:g' -e 's:\$(BIN):manifest:g' -e 's:\$(SHIMPATH):'$RELDIR'..//../../../Runtime/libsysdb.so:g' -e 's:\$(LIBCDIR):'$RELDIR'..//../../../Runtime:g'  manifest.template > manifest
+  [ ls.manifest.manifest.sgx.d ]
+  [ multisleep.manifest.sgx.d ]
+  [ fs.manifest.sgx.d ]
+  [ brk.manifest.sgx.d ]
+  [ condvar.pthread.manifest.sgx.d ]
+  [ rename.manifest.sgx.d ]
+  [ get_time.m.manifest.sgx.d ]
+  [ pipe_latency.manifest.sgx.d ]
+  [ fork_exec.manifest.sgx.d ]
+  [ pipe.manifest.sgx.d ]
+  [ msg_send.libos.manifest.sgx.d ]
+  [ msg_create.libos.manifest.sgx.d ]
+  [ futextest.pthread.manifest.sgx.d ]
+[ exec_fork.manifest ]
+RELDIR= && \
+sed -e 's:\$(PAL):/home/user1/graphene-sgx/Runtime/pal_loader SGX:g' -e 's:\$(PWD):/home/user1/graphene-sgx/LibOS/shim/test/native:g' -e 's:\$(BIN):exec_fork:g' -e 's:\$(SHIMPATH):'$RELDIR'..//../../../Runtime/libsysdb.so:g' -e 's:\$(LIBCDIR):'$RELDIR'..//../../../Runtime:g'  exec_fork.manifest.template > exec_fork.manifest
+(grep -q '^#!' exec_fork.manifest && chmod +x exec_fork.manifest) || true
+  [ exec_fork.manifest.sgx.d ]
+  [ malloc.manifest.sgx.d ]
+  [ msg_send.manifest.sgx.d ]
+  [ sync.pthread.manifest.sgx.d ]
+  [ vfork.manifest.sgx.d ]
+  [ tcp.manifest.sgx.d ]
+  [ errno.manifest.sgx.d ]
+  [ sem.manifest.sgx.d ]
+  [ pid_alloc.manifest.sgx.d ]
+  [ cpuinfo.manifest.sgx.d ]
+  [ helloworld.pthread.manifest.sgx.d ]
+  [ epoll.manifest.sgx.d ]
+  [ sqrt.m.manifest.sgx.d ]
+  [ fork_bomb.manifest.sgx.d ]
+  [ socketpair.manifest.sgx.d ]
+  [ file.manifest.sgx.d ]
+  [ dup.manifest.sgx.d ]
+  [ system.manifest.sgx.d ]
+  [ helloworld.manifest.sgx.d ]
+  [ readdir.manifest.sgx.d ]
+  [ kill.manifest.sgx.d ]
+  [ multiproc.manifest.sgx.d ]
+  [ clone.manifest.sgx.d ]
+  [ sleep.manifest.sgx.d ]
+  [ msg_create.manifest.sgx.d ]
+  [ pause.manifest.sgx.d ]
+  [ meminfo.manifest.sgx.d ]
+  [ pid_kill.manifest.sgx.d ]
+  [ vfork_exec.manifest.sgx.d ]
+  [ divzero.manifest.sgx.d ]
+[ script.manifest ]
+RELDIR= && \
+sed -e 's:\$(PAL):/home/user1/graphene-sgx/Runtime/pal_loader SGX:g' -e 's:\$(PWD):/home/user1/graphene-sgx/LibOS/shim/test/native:g' -e 's:\$(BIN):script:g' -e 's:\$(SHIMPATH):'$RELDIR'..//../../../Runtime/libsysdb.so:g' -e 's:\$(LIBCDIR):'$RELDIR'..//../../../Runtime:g'  script.manifest.template > script.manifest
+(grep -q '^#!' script.manifest && chmod +x script.manifest) || true
+  [ script.manifest.sgx.d ]
+  [ alarm.manifest.sgx.d ]
+  [ fork.manifest.sgx.d ]
+  [ time.manifest.sgx.d ]
+  [ dir.manifest.sgx.d ]
+  [ start.pthread.m.manifest.sgx.d ]
+  [ test_start_pthread_m.m.manifest.sgx.d ]
+  [ epoll_socket.manifest.sgx.d ]
+ln -sf ..//../../../Runtime/pal_loader
+  [ sem ]
+  [ vfork_exec ]
+  [ epoll_socket ]
+make: *** No rule to make target 'test_start_pthread_m.m', needed by 'all'.  Stop.
